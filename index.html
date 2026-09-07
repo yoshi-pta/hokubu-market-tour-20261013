@@ -71,6 +71,8 @@
   .brand .mark{width:36px;height:36px;border-radius:10px;flex:0 0 auto;background:var(--aqua-ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;}
   .brand .sub{display:block;font-size:10.5px;font-weight:500;color:var(--ink-soft);}
   .nav-cta{font-family:var(--font-display);font-weight:900;font-size:13.5px;background:var(--cream-ink);color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;white-space:nowrap;}
+  .nav-actions{display:flex;gap:8px;align-items:center;flex:0 0 auto;}
+  .nav-cta2{font-family:var(--font-display);font-weight:900;font-size:13.5px;background:#fff;color:var(--aqua-ink);border:2px solid var(--aqua-ink);text-decoration:none;padding:8px 14px;border-radius:999px;white-space:nowrap;}
 
   /* ====== ヒーロー ====== */
   .hero{background:var(--aqua);padding:34px 0 40px;}
@@ -292,6 +294,9 @@
     .tl-body::before{left:-23px;}
     .btn-black{min-width:0;width:100%;}
     .brand .sub{display:none;}
+    .nav-actions{gap:6px;}
+    .nav-cta{padding:9px 13px;font-size:12.5px;}
+    .nav-cta2{padding:7px 11px;font-size:12.5px;}
     /* 2行に折り返しても不格好にならないよう角丸長方形に */
     .hero-eyebrow{font-size:12.5px;padding:8px 16px;border-radius:14px;line-height:1.6;}
   }
@@ -310,8 +315,10 @@
         <span class="sub">北部3区PTA協議会（麻生区・多摩区・宮前区）</span>
       </span>
     </div>
-    <!-- 【要差し替え】Googleフォームの公開URL -->
-    <a href="#apply" class="nav-cta">応募する</a>
+    <div class="nav-actions">
+      <a href="#contact" class="nav-cta2">問い合わせ</a>
+      <a href="#apply" class="nav-cta">応募する</a>
+    </div>
   </div>
 </header>
 
@@ -716,18 +723,6 @@
 </section>
 
 
-<!-- ===== お問い合わせについて ===== -->
-<section class="section contact">
-  <div class="wrap">
-    <div class="contact-box">
-      <div class="ttl">お問い合わせは、必ずこちらへ</div>
-      <div class="ng">🚫 北部市場への直接のお問い合わせは、固くお断りしております</div>
-      <p>北部市場は、毎朝たくさんの方が働いている職場です。市場のみなさまは、この見学会のためにお仕事の合間を割いてご協力くださっています。<strong>お電話・窓口でのお問い合わせは、その仕事の妨げになってしまいます。</strong></p>
-      <p>この見学会についてのご質問・キャンセルのご連絡などは、<strong>所属する区のPTA協議会事務局、または運営委員会の担当者</strong>までお願いいたします。ご応募いただいた方は、<strong>受付確認メールへのご返信</strong>でも承ります。主催のPTAが責任をもってお答えします。</p>
-      <p class="btn-note-soon">お急ぎの場合は、区のPTA協議会の連絡網をご利用ください。</p>
-    </div>
-  </div>
-</section>
 
 <!-- ===== 最終CTA ===== -->
 <section class="section final" id="apply">
@@ -747,6 +742,19 @@
         ご応募には、在籍区・学校名・学年・保護者のお名前とご連絡先が必要です。<br>
         抽選結果は9月27日（日）に、ご登録のメールアドレスへご連絡します。
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お問い合わせについて ===== -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="ttl">お問い合わせは、必ずこちらへ</div>
+      <div class="ng">🚫 北部市場への直接のお問い合わせは、固くお断りしております</div>
+      <p>北部市場は、毎朝たくさんの方が働いている職場です。市場のみなさまは、この見学会のためにお仕事の合間を割いてご協力くださっています。<strong>お電話・窓口でのお問い合わせは、その仕事の妨げになってしまいます。</strong></p>
+      <p>この見学会についてのご質問・キャンセルのご連絡などは、<strong>所属する区のPTA協議会事務局、または運営委員会の担当者</strong>までお願いいたします。ご応募いただいた方は、<strong>受付確認メールへのご返信</strong>でも承ります。主催のPTAが責任をもってお答えします。</p>
+      <p class="btn-note-soon">お急ぎの場合は、区のPTA協議会の連絡網をご利用ください。</p>
     </div>
   </div>
 </section>
