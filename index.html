@@ -6,9 +6,9 @@
 <!-- 募集開始まで検索避け。正式公開時にこの1行を削除してください -->
 <meta name="robots" content="noindex,nofollow">
 <title>10/13は学校がお休み。親子で市場へ。｜川崎市中央卸売市場北部市場 親子見学会</title>
-<meta name="description" content="2026年10月13日(火)は川崎市立小中学校の一斉休業日「ホリスタ」。朝8時開始・10時10分終了。冷蔵庫体験、水産・関連・青果の3棟見学、仲卸のお話、食品衛生検査所の説明。麻生区・多摩区・宮前区のPTA会員のご家庭／親子15組／参加無料。">
+<meta name="description" content="2026年10月13日(火)は川崎市立小中学校の一斉休業日「ホリスタ」。朝8時開始・10時10分終了。マイナス20度の冷蔵庫体験、水産・関連・青果の3棟見学、食品衛生検査所の説明。麻生区・多摩区・宮前区にお住まいの小学生・中学生と保護者／最大15組／参加無料。">
 <meta property="og:title" content="10/13は学校がお休み。親子で市場へ。｜北部市場 親子見学会">
-<meta property="og:description" content="2026/10/13(火) 8:00開始・10:10終了｜冷蔵庫体験あり｜川崎市中央卸売市場北部市場｜親子15組・参加無料">
+<meta property="og:description" content="2026/10/13(火) 8:00開始・10:10終了｜マイナス20度の冷蔵庫体験｜川崎市中央卸売市場北部市場｜最大15組・参加無料">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,6 +151,25 @@
   .sec-head h2{font-size:clamp(22px,4.2vw,31px);font-weight:900;}
   .sec-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;max-width:34em;margin-left:auto;margin-right:auto;}
 
+
+  /* ====== 冷蔵庫ハイライト ====== */
+  .cold{background:var(--aqua);}
+  .cold-card{background:#fff;border-radius:22px;box-shadow:var(--shadow);padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;}
+  .cold-card svg{width:100%;height:auto;display:block;}
+  .cold .tagline{display:inline-block;font-family:var(--font-display);font-weight:900;font-size:14px;background:var(--aqua-ink);color:#fff;padding:6px 18px;border-radius:999px;margin-bottom:12px;}
+  .cold h2{font-size:clamp(23px,4vw,32px);font-weight:900;line-height:1.35;}
+  .cold h2 .deg{color:var(--aqua-ink);}
+  .cold p{margin-top:14px;font-size:15px;color:var(--ink-soft);}
+  .cold .warn-line{margin-top:16px;background:var(--cream);border-radius:12px;padding:12px 16px;font-size:14px;font-family:var(--font-display);font-weight:700;color:var(--cream-ink);}
+
+  /* ====== 問い合わせ注意 ====== */
+  .contact{background:#fff;}
+  .contact-box{border:3px solid var(--cream-ink);border-radius:18px;padding:28px 26px;text-align:center;max-width:720px;margin:0 auto;}
+  .contact-box .ttl{font-family:var(--font-display);font-weight:900;font-size:clamp(18px,3.2vw,24px);color:var(--cream-ink);}
+  .contact-box p{margin-top:12px;font-size:15px;color:var(--ink-soft);}
+  .contact-box .ng{background:#FDECE2;border-radius:12px;padding:14px 18px;margin-top:16px;font-size:15px;font-family:var(--font-display);font-weight:700;color:#A33F14;}
+  .contact-box .btn-black{margin-top:20px;}
+
   /* ====== できること3枚 ====== */
   .bg-mint{background:var(--mint);}
   .bg-cream{background:var(--cream);}
@@ -261,7 +280,7 @@
 </head>
 <body>
 
-<div class="topbar">📣 ただいま申込受付中｜申込締切 <b>2026年9月26日（土）</b>｜親子15組・参加無料</div>
+<div class="topbar">📣 ただいま応募受付中｜応募締切 <b>2026年9月26日（土）</b>｜最大15組・参加無料</div>
 
 <header class="nav">
   <div class="nav-inner">
@@ -272,7 +291,7 @@
       </span>
     </div>
     <!-- 【要差し替え】Googleフォームの公開URL -->
-    <a href="#apply" class="nav-cta">お申し込み</a>
+    <a href="#apply" class="nav-cta">応募する</a>
   </div>
 </header>
 
@@ -285,7 +304,7 @@
       <p class="h1sub"><span class="nb">親子でたのしむ食育見学会</span>｜<span class="nb">川崎市中央卸売市場 北部市場</span></p>
 
       <div class="puffy-row">
-        <span class="puffy">冷蔵庫体験</span>
+        <span class="puffy">−20℃の冷蔵庫体験</span>
         <span class="puffy b2">食のあんぜん体験</span>
         <span class="puffy b3">参加無料</span>
       </div>
@@ -295,9 +314,9 @@
         <span class="w">（火）</span>
       </div>
       <div class="time-note"><span class="nb">8:00 開始</span> <span class="tn-sub">（10:10 終了）</span></div>
-      <p class="hero-note">対象：麻生区・多摩区・宮前区のPTA会員のご家庭／親子15組（応募多数の場合は抽選・結果は9月27日にご連絡）</p>
+      <p class="hero-note">対象：麻生区・多摩区・宮前区にお住まいの小学生・中学生と、その保護者／最大15組（応募多数の場合は抽選・結果は9月27日にご連絡）</p>
 
-      <p style="margin-top:22px;"><a href="#apply" class="btn-black btn-orange">親子で参加を申し込む <span class="cv">▶</span></a></p>
+      <p style="margin-top:22px;"><a href="#apply" class="btn-black btn-orange">参加申し込みに応募する <span class="cv">▶</span></a></p>
     </div>
   </div>
 </section>
@@ -324,6 +343,64 @@
   </div>
 </section>
 
+
+<!-- ===== 冷蔵庫ハイライト ===== -->
+<section class="section cold">
+  <div class="wrap">
+    <div class="cold-card">
+      <svg viewBox="0 0 420 300" role="img" aria-label="マイナス20度の大型冷蔵庫に入る親子のイラスト">
+        <rect width="420" height="300" rx="16" fill="#EAF4F8"/>
+        <!-- 冷蔵庫本体 -->
+        <rect x="46" y="34" width="200" height="232" rx="10" fill="#C8D9E0"/>
+        <rect x="58" y="46" width="176" height="208" rx="6" fill="#9FBECB"/>
+        <!-- 開いた扉 -->
+        <g transform="translate(246,34)">
+          <path d="M0 0 L118 30 L118 202 L0 232 Z" fill="#DCE8ED"/>
+          <path d="M0 0 L118 30 L118 202 L0 232 Z" fill="none" stroke="#B4CBD5" stroke-width="3"/>
+          <rect x="14" y="104" width="9" height="34" rx="4" fill="#7FA3B3"/>
+        </g>
+        <!-- 庫内（冷気） -->
+        <rect x="70" y="58" width="152" height="184" rx="5" fill="#2E6B85"/>
+        <rect x="70" y="58" width="152" height="184" rx="5" fill="url(#g1)" opacity=".55"/>
+        <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BFE4F2"/><stop offset="1" stop-color="#2E6B85" stop-opacity="0"/></linearGradient></defs>
+        <!-- 積まれた箱 -->
+        <rect x="80" y="196" width="46" height="40" rx="3" fill="#E9EEF0"/>
+        <rect x="80" y="188" width="46" height="12" rx="3" fill="#F7FAFB"/>
+        <rect x="132" y="204" width="42" height="32" rx="3" fill="#DCE6EA"/>
+        <!-- 中に立つ親子（後ろ姿・白い息） -->
+        <g transform="translate(150,120)">
+          <circle cx="16" cy="12" r="12" fill="#22323C"/><path d="M2 30 Q16 22 30 30 L30 76 L2 76 Z" fill="#F2A65A"/>
+          <circle cx="46" cy="30" r="9" fill="#22323C"/><path d="M35 44 Q46 38 57 44 L57 76 L35 76 Z" fill="#9BD0E0"/>
+        </g>
+        <!-- 白い息 -->
+        <g fill="#fff" opacity=".85">
+          <ellipse cx="186" cy="128" rx="13" ry="8"/><ellipse cx="202" cy="120" rx="8" ry="5"/><ellipse cx="212" cy="114" rx="5" ry="3.4"/>
+        </g>
+        <!-- 冷気の粒 -->
+        <g fill="#DFF1F8" opacity=".9">
+          <circle cx="96" cy="92" r="4"/><circle cx="120" cy="76" r="3"/><circle cx="196" cy="86" r="3.4"/><circle cx="168" cy="70" r="2.6"/>
+        </g>
+        <!-- 雪の結晶 -->
+        <g stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".95">
+          <g transform="translate(104,140)"><path d="M0 -11 V11 M-9.5 -5.5 L9.5 5.5 M-9.5 5.5 L9.5 -5.5"/></g>
+          <g transform="translate(210,190)"><path d="M0 -8 V8 M-7 -4 L7 4 M-7 4 L7 -4"/></g>
+        </g>
+        <!-- 温度表示パネル -->
+        <g transform="translate(20,210)">
+          <rect x="0" y="0" width="122" height="58" rx="10" fill="#12303C"/>
+          <text x="61" y="40" text-anchor="middle" font-family="'Zen Maru Gothic',sans-serif" font-weight="900" font-size="34" fill="#6FE3FF">−20℃</text>
+        </g>
+      </svg>
+      <div>
+        <span class="tagline">❄️ この日いちばんの体験</span>
+        <h2><span class="deg">−20℃</span>の世界に、<br>入ってみませんか。</h2>
+        <p>市場には、食べものを守るための大型の冷蔵庫があります。扉の向こうは、外がどんなに暑くてもマイナス20度。<strong>ふだんは関係者しか入れない場所</strong>に、この日だけ入らせていただきます。</p>
+        <p>吐く息が白くなり、手すりまで冷たい。「冷やして運ぶ」ということを、頭ではなく体で覚えて帰れる15分です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== この日できること ===== -->
 <section class="section bg-mint">
   <div class="wrap">
@@ -335,13 +412,13 @@
     <div class="cards3">
       <div class="card">
         <div class="ico">🚶</div>
-        <h3>冷蔵庫の中に入る</h3>
-        <p>川崎冷蔵の巨大な冷蔵庫へ。扉の向こうは別世界の寒さです。この日いちばん、体で覚える体験。</p>
+        <h3>−20℃の世界に入る</h3>
+        <p>市場の大型冷蔵庫の中へ。ふだんは絶対に入れない場所です。この日いちばん、体で覚える体験。</p>
       </div>
       <div class="card">
         <div class="ico">🛻</div>
         <h3>3つの棟をあるく</h3>
-        <p>水産棟・関連棟・青果棟へ。仲卸の保坂さん、青果の樋口さんから直接お話をうかがいます。</p>
+        <p>水産棟・関連棟・青果棟へ。魚や野菜をお店に届けるプロの方から、直接お話をうかがいます。</p>
       </div>
       <div class="card">
         <div class="ico">🔬</div>
@@ -438,8 +515,8 @@
       <div class="tl-item">
         <div class="tl-time">8:20<br>-8:35</div>
         <div class="tl-body">
-          <h3>冷蔵庫体験（川崎冷蔵）</h3>
-          <p>市場の巨大な冷蔵庫の中へ入ります。外がどんなに暑くても、扉の向こうは別世界。この日いちばん体で覚える体験です。上着を忘れずに。</p>
+          <h3>−20℃の冷蔵庫体験</h3>
+          <p>市場の大型冷蔵庫の中へ入ります。外がどんなに暑くても、扉の向こうはマイナス20度の世界。この日いちばん、体で覚える体験です。</p>
         </div>
       </div>
       <div class="tl-item">
@@ -452,8 +529,8 @@
       <div class="tl-item">
         <div class="tl-time">8:45<br>-8:55</div>
         <div class="tl-body">
-          <h3>仲卸のお話（山忠保坂水産・保坂さん）</h3>
-          <p>魚がどこから来て、どこへ運ばれていくのか。現場で働く方から直接うかがいます。質問もどうぞ。</p>
+          <h3>魚のプロのお話（水産仲卸）</h3>
+          <p>「仲卸（なかおろし）」は、市場に届いた魚を目利きして、お寿司屋さんや魚屋さんへ届ける専門家です。魚がどこから来て、どこへ運ばれていくのかを直接うかがいます。質問もどうぞ。</p>
         </div>
       </div>
       <div class="tl-item">
@@ -466,8 +543,8 @@
       <div class="tl-item">
         <div class="tl-time">9:05<br>-9:15</div>
         <div class="tl-body">
-          <h3>青果のお話（東一川崎中央青果・樋口さん）</h3>
-          <p>野菜と果物が、畑からお店に届くまで。青果のプロにうかがいます。</p>
+          <h3>野菜・果物のプロのお話（青果卸売会社）</h3>
+          <p>全国の畑から届いた野菜や果物を、スーパーや八百屋さんへつなぐ会社の方にうかがいます。畑からお店に届くまでの道のりを聞いてみましょう。</p>
         </div>
       </div>
       <div class="tl-item">
@@ -500,13 +577,13 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="pill mint">開催概要</span>
-      <h2>お申し込みの前に。</h2>
+      <h2>ご応募の前に。</h2>
     </div>
     <div class="info">
       <div class="info-row"><div class="lb">📅 日時</div><div class="vl"><strong>2026年10月13日（火）8:00 開始</strong><br><strong style="font-size:15px;">10:10 終了</strong><br><small style="color:var(--ink-soft);">集合：8:00／管理事務所棟1階ロビー<br>この日は川崎市立小中学校の一斉休業日「ホリスタ」です</small></div></div>
       <div class="info-row"><div class="lb">📍 会場</div><div class="vl">川崎市中央卸売市場 北部市場<br><small style="color:var(--ink-soft);">川崎市宮前区水沢1-1-1</small></div></div>
-      <div class="info-row"><div class="lb">👨‍👩‍👧 対象</div><div class="vl">麻生区・多摩区・宮前区のPTA会員のご家庭<br><small style="color:var(--ink-soft);">お子さん（小学生・中学生）と保護者のペアでご参加ください</small></div></div>
-      <div class="info-row"><div class="lb">🎫 定員</div><div class="vl"><strong>親子15組（30名）</strong><br><small style="color:var(--ink-soft);">応募多数の場合は抽選。結果は9月27日（日）にご連絡します</small></div></div>
+      <div class="info-row"><div class="lb">👨‍👩‍👧 対象</div><div class="vl">麻生区・多摩区・宮前区にお住まいの小学生・中学生と、その保護者<br><small style="color:var(--ink-soft);">お子さんだけでのご参加はできません。必ず保護者の方とご一緒にご応募ください</small></div></div>
+      <div class="info-row"><div class="lb">🎫 定員</div><div class="vl"><strong>最大15組</strong><br><small style="color:var(--ink-soft);">応募多数の場合は抽選。結果は9月27日（日）にご連絡します</small></div></div>
       <!-- 【要確定】申込締切日 -->
       <div class="info-row"><div class="lb">✉️ 申込締切</div><div class="vl"><strong>2026年9月26日（土）</strong></div></div>
       <div class="info-row"><div class="lb">💰 参加費</div><div class="vl"><span class="free">無料</span></div></div>
@@ -537,7 +614,7 @@
     </ul>
     <div class="carnote">
       <b>🚗 お車でお越しの方へ</b><br>
-      市場の駐車場は台数に限りがあり、業務用の車両が優先です。可能なかぎり公共交通機関、または参加される方どうしでの乗り合わせにご協力ください。お申し込みフォームで、お車の利用予定をおうかがいします。
+      市場の駐車場は台数に限りがあり、業務用の車両が優先です。可能なかぎり公共交通機関、または参加される方どうしでの乗り合わせにご協力ください。応募フォームで、お車の利用予定をおうかがいします。
     </div>
   </div>
 </section>
@@ -559,8 +636,8 @@
         <div><h3>歩きやすく、汚れてもよい服装で</h3><p>床が濡れている場所があります。サンダルやヒールは避け、スニーカーでお越しください。</p></div>
       </div>
       <div class="rule">
-        <span class="ic">🧥</span>
-        <div><h3>朝は冷えます</h3><p>10月の朝8時、しかも場内は冷やされているエリアがあります。羽織るものを1枚ご用意ください。</p></div>
+        <span class="ic">📷</span>
+        <div><h3>当日は写真を撮影します</h3><p>活動の記録として写真を撮影し、PTAだよりや広報物、PTA関係のWebページに掲載する場合があります。ご応募の際に、この点へのご同意をお願いしています。</p></div>
       </div>
       <div class="rule">
         <span class="ic">🤫</span>
@@ -579,6 +656,10 @@
     </div>
     <div class="faq">
       <details>
+        <summary><span class="q">Q.</span>北部市場に直接問い合わせてもよいですか？</summary>
+        <div class="a"><strong>お控えください。</strong>北部市場は毎朝プロの方々が働いている職場で、この見学会にもお仕事の合間を割いてご協力いただいています。お電話や窓口でのお問い合わせは、その仕事の妨げになってしまいます。ご質問・キャンセルのご連絡は、すべて主催PTAの問い合わせフォームへお願いいたします。</div>
+      </details>
+      <details>
         <summary><span class="q">Q.</span>朝8時集合ですが、学校はどうなりますか？</summary>
         <div class="a">10月13日（火）は、川崎市立の小中学校が一斉にお休みになる日（体験的学習活動等休業日「かわさきホリデー＆スタディ」＝通称ホリスタ）です。学校をお休みして参加していただく必要はありません。</div>
       </details>
@@ -588,11 +669,11 @@
       </details>
       <details>
         <summary><span class="q">Q.</span>子どもだけで参加できますか？</summary>
-        <div class="a">できません。市場は業務用の車両が走る場所ですので、必ず保護者の方がご同伴ください。お子さんと保護者のペアで1組としてお申し込みいただきます。</div>
+        <div class="a">できません。市場は業務用の車両が走る場所ですので、必ず保護者の方がご同伴ください。お子さんと保護者で1組としてご応募いただきます。</div>
       </details>
       <details>
         <summary><span class="q">Q.</span>兄弟姉妹も一緒に参加できますか？</summary>
-        <div class="a">ご参加いただけます。お申し込みフォームに、参加されるお子さんの人数と学年をご記入ください。応募状況によっては、人数を調整させていただく場合があります。</div>
+        <div class="a">ご参加いただけます。応募フォームに、参加されるお子さんの人数と学年をご記入ください。応募状況によっては、人数を調整させていただく場合があります。</div>
       </details>
       <details>
         <summary><span class="q">Q.</span>雨のときはどうなりますか？</summary>
@@ -600,16 +681,31 @@
       </details>
       <details>
         <summary><span class="q">Q.</span>写真撮影はできますか？</summary>
-        <div class="a">お店や商品の撮影は、案内する職員の指示に従ってください。当日は記録のため主催側でも写真を撮影します。広報物・PTA便り等への掲載可否は、お申し込み時に保護者の方の同意を確認します。</div>
+        <div class="a">お店や商品の撮影は、案内する職員の指示に従ってください。また、当日は活動の記録として主催側でも写真を撮影し、PTAだよりや広報物、PTA関係のWebページに掲載する場合があります。ご応募の際に、この点へのご同意をお願いしています。</div>
       </details>
       <details>
         <summary><span class="q">Q.</span>キャンセルはできますか？</summary>
-        <div class="a">お申し込み後にご都合が悪くなった場合は、できるだけ早めにご連絡ください。定員が限られているため、キャンセル待ちの方へお声がけいたします。</div>
+        <div class="a">ご応募後・当選後にご都合が悪くなった場合は、できるだけ早めに問い合わせフォームからご連絡ください。定員が限られているため、キャンセル待ちの方へお声がけいたします。</div>
       </details>
       <details>
         <summary><span class="q">Q.</span>PTA会員でなくても参加できますか？</summary>
-        <div class="a">今回は宮前区・多摩区・麻生区のPTA会員のご家庭を対象とした企画です。ご不明な場合は、各校のPTA役員またはお申し込みフォームからお問い合わせください。</div>
+        <div class="a">今回は麻生区・多摩区・宮前区にお住まいの小学生・中学生とその保護者を対象とした企画です。ご不明な場合は、下記の問い合わせフォームからご連絡ください。</div>
       </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== お問い合わせについて ===== -->
+<section class="section contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <div class="ttl">お問い合わせは、必ずこちらへ</div>
+      <div class="ng">🚫 北部市場への直接のお問い合わせは、固くお断りしております</div>
+      <p>北部市場は、毎朝たくさんの方が働いている職場です。市場のみなさまは、この見学会のためにお仕事の合間を割いてご協力くださっています。<strong>お電話・窓口でのお問い合わせは、その仕事の妨げになってしまいます。</strong></p>
+      <p>この見学会についてのご質問・キャンセルのご連絡などは、すべて下記の問い合わせフォームへお願いいたします。主催のPTAが責任をもってお答えします。</p>
+      <!-- 【要差し替え】問い合わせ用Googleフォームの公開URL -->
+      <p><a href="#" class="btn-black">問い合わせフォームへ <span class="cv">▶</span></a></p>
     </div>
   </div>
 </section>
@@ -618,10 +714,10 @@
 <section class="section final" id="apply">
   <div class="wrap">
     <h2>学校がお休みの日に、<br>朝8時の市場へ。</h2>
-    <p>麻生区・多摩区・宮前区のPTA会員のご家庭／参加無料／親子15組（応募多数の場合は抽選）<br><strong>申込締切：2026年9月26日（土）</strong>／抽選結果は9月27日（日）にご連絡します</p>
+    <p>麻生区・多摩区・宮前区にお住まいの小学生・中学生と、その保護者／参加無料／最大15組（応募多数の場合は抽選）<br><strong>申込締切：2026年9月26日（土）</strong>／抽選結果は9月27日（日）にご連絡します</p>
     <!-- 【要差し替え】Googleフォームの公開URL（https://forms.gle/～） -->
-    <p><a href="#" class="btn-black btn-orange">お申し込みフォーム <span class="cv">▶</span></a></p>
-    <p style="font-size:13px;margin-top:14px;">お申し込みフォームでは、参加人数・お車の利用予定・写真掲載のご希望をあわせてうかがいます。</p>
+    <p><a href="#" class="btn-black btn-orange">参加申し込みに応募する <span class="cv">▶</span></a></p>
+    <p style="font-size:13px;margin-top:14px;">応募フォームでは、参加人数・学年・お車の利用予定などをあわせてうかがいます。</p>
   </div>
 </section>
 
