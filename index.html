@@ -254,6 +254,21 @@
   .faq summary .q{color:var(--cream-ink);}
   .faq .a{padding:0 20px 18px;font-size:14.5px;color:var(--ink-soft);}
 
+
+  /* ====== 申込フォーム（GAS Webアプリ埋め込み） ====== */
+  .formbox{max-width:680px;margin:0 auto;}
+  .formbox iframe{
+    width:100%; border:0; display:block; min-height:640px;
+    transition:height .2s ease; background:transparent;
+  }
+  .form-soon{
+    background:#fff; border:2px dashed var(--line); border-radius:18px;
+    padding:28px 22px; text-align:center;
+  }
+  .form-soon .t{font-family:var(--font-display);font-weight:900;font-size:17px;margin-bottom:8px;}
+  .form-soon .d{font-size:14px;color:var(--ink-soft);line-height:1.8;}
+  .form-note{font-size:13px;color:var(--ink-soft);margin-top:16px;line-height:1.8;}
+
   /* ====== 最終CTA ====== */
   .final{background:var(--cream);text-align:center;}
   .final h2{font-size:clamp(22px,4.4vw,33px);font-weight:900;margin-bottom:12px;}
@@ -722,11 +737,20 @@
   <div class="wrap">
     <h2>学校がお休みの日に、<br>朝8時の市場へ。</h2>
     <p>麻生区・多摩区・宮前区のPTA役員（単位PTAの役員を含む）と、そのお子さん／参加無料／最大15組（応募多数の場合は抽選）<br><strong>申込締切：2026年9月26日（土）</strong>／抽選結果は9月27日（日）にご連絡します</p>
-    <!-- 【要差し替え】Googleフォームの公開URL（https://forms.gle/～） -->
-    <!-- 【要差し替え】応募用Googleフォームの公開URL。決まり次第 <a href="URL" class="btn-black btn-orange"> に戻す -->
-    <p><span class="btn-black btn-orange btn-soon" aria-disabled="true">応募フォームは準備中です</span></p>
-    <p class="btn-note-soon">応募受付の開始は、各校からのご案内でお知らせします。</p>
-    <p style="font-size:13px;margin-top:14px;">応募フォームでは、参加人数・学年・お車の利用予定などをあわせてうかがいます。</p>
+    <div class="formbox">
+      <!-- GASウェブアプリのURLは、下部の <script> 内 GAS_FORM_URL に設定します -->
+      <iframe id="applyFrame" title="北部市場 親子見学会 参加申込フォーム"
+              width="100%" frameborder="0" scrolling="no" loading="lazy"
+              style="display:none;"></iframe>
+      <div class="form-soon" id="formSoon">
+        <div class="t">応募フォームは準備中です</div>
+        <div class="d">応募受付の開始は、各校からのご案内でお知らせします。</div>
+      </div>
+      <p class="form-note">
+        ご応募には、在籍区・学校名・学年・保護者のお名前とご連絡先が必要です。<br>
+        抽選結果は9月27日（日）に、ご登録のメールアドレスへご連絡します。
+      </p>
+    </div>
   </div>
 </section>
 
@@ -742,6 +766,41 @@
 </footer>
 
 <script>
+
+  /* ============================================================
+     参加申込フォーム（GASウェブアプリ）の埋め込み
+     ------------------------------------------------------------
+     【要設定】GASで「デプロイ → 新しいデプロイ → ウェブアプリ」を実行し、
+     発行された URL（https://script.google.com/macros/s/******/exec）を
+     次の GAS_FORM_URL に貼り付けてください。空のままだと「準備中」表示になります。
+     ============================================================ */
+  var GAS_FORM_URL = '';
+
+  (function(){
+    var frame = document.getElementById('applyFrame');
+    var soon  = document.getElementById('formSoon');
+    if (!frame || !soon) return;
+
+    if (GAS_FORM_URL) {
+      frame.src = GAS_FORM_URL;
+      frame.style.display = 'block';
+      soon.style.display = 'none';
+    }
+
+    // GAS側から送られてくる高さに合わせてiframeを伸縮させる
+    window.addEventListener('message', function(e){
+      if (!/^https:\/\/([a-z0-9-]+\.)?(script\.google\.com|googleusercontent\.com)$/.test(e.origin)) return;
+      var d = e.data;
+      if (!d || typeof d !== 'object') return;
+      if (d.type === 'hokubu-form-height' && d.height) {
+        frame.style.height = Math.max(420, Math.min(4000, d.height)) + 'px';
+      }
+      if (d.type === 'hokubu-form-done') {
+        try { frame.scrollIntoView({ block: 'center' }); } catch (x) {}
+      }
+    });
+  })();
+
   // タブ切り替え
   const tabs = document.querySelectorAll('.tab');
   tabs.forEach(tab=>{
