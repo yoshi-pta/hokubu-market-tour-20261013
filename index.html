@@ -38,7 +38,9 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  /* iOS Safariでのアンカー移動の揺れを避けるため、smoothはマウス環境のみ */
+  html{scroll-behavior:auto;scroll-padding-top:72px;}
+  @media (hover:hover) and (pointer:fine){html{scroll-behavior:smooth;}}
   body{
     margin:0;
     font-family:var(--font-text);
@@ -118,6 +120,9 @@
   }
   .btn-black .cv{font-size:13px;}
   .btn-orange{background:var(--cream-ink);}
+  /* URL未確定のあいだ押せない状態にする（href="#" はページ先頭へ飛ぶため使わない） */
+  .btn-soon{background:#B9B4AD;color:#fff;cursor:default;}
+  .btn-note-soon{font-size:13px;color:var(--ink-soft);margin-top:10px;}
 
   /* ====== アンカーボタン列 ====== */
   .anchors{background:var(--aqua);padding:0 0 34px;}
@@ -344,6 +349,34 @@
 </section>
 
 
+<!-- ===== この日できること ===== -->
+<section class="section bg-mint">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="pill mint">この日、できること</span>
+      <h2>ふだんは入れない場所を、歩きます。</h2>
+      <p>テーマは「売っている場所」ではなく、食べものが流れていく姿。市場の職員のご案内で見学します。</p>
+    </div>
+    <div class="cards3">
+      <div class="card">
+        <div class="ico">🚶</div>
+        <h3>−25℃の世界に入る</h3>
+        <p>市場の大型冷蔵庫の中へ。ふだんは絶対に入れない場所です。この日いちばん、体で覚える体験。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🛻</div>
+        <h3>3つの棟をあるく</h3>
+        <p>水産棟・関連棟・青果棟へ。魚や野菜をお店に届けるプロの方から、直接お話をうかがいます。</p>
+      </div>
+      <div class="card">
+        <div class="ico">🔬</div>
+        <h3>食のあんぜんを知る</h3>
+        <p>市場のなかにある食品衛生検査所へ。わたしたちの食卓がどう守られているのかを職員の方に教わります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 冷蔵庫ハイライト ===== -->
 <section class="section cold">
   <div class="wrap">
@@ -396,34 +429,6 @@
         <h2><span class="deg">−25℃</span>の世界に、<br>入ってみませんか。</h2>
         <p>市場には、食べものを守るための大型の冷蔵庫があります。扉の向こうは、外がどんなに暑くてもマイナス25度。<strong>ふだんは関係者しか入れない場所</strong>に、この日だけ入らせていただきます。</p>
         <p>吐く息が白くなり、手すりまで冷たい。「冷やして運ぶ」ということを、頭ではなく体で覚えて帰れる15分です。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== この日できること ===== -->
-<section class="section bg-mint">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="pill mint">この日、できること</span>
-      <h2>ふだんは入れない場所を、歩きます。</h2>
-      <p>テーマは「売っている場所」ではなく、食べものが流れていく姿。市場の職員のご案内で見学します。</p>
-    </div>
-    <div class="cards3">
-      <div class="card">
-        <div class="ico">🚶</div>
-        <h3>−25℃の世界に入る</h3>
-        <p>市場の大型冷蔵庫の中へ。ふだんは絶対に入れない場所です。この日いちばん、体で覚える体験。</p>
-      </div>
-      <div class="card">
-        <div class="ico">🛻</div>
-        <h3>3つの棟をあるく</h3>
-        <p>水産棟・関連棟・青果棟へ。魚や野菜をお店に届けるプロの方から、直接お話をうかがいます。</p>
-      </div>
-      <div class="card">
-        <div class="ico">🔬</div>
-        <h3>食のあんぜんを知る</h3>
-        <p>市場のなかにある食品衛生検査所へ。わたしたちの食卓がどう守られているのかを職員の方に教わります。</p>
       </div>
     </div>
   </div>
@@ -705,7 +710,9 @@
       <p>北部市場は、毎朝たくさんの方が働いている職場です。市場のみなさまは、この見学会のためにお仕事の合間を割いてご協力くださっています。<strong>お電話・窓口でのお問い合わせは、その仕事の妨げになってしまいます。</strong></p>
       <p>この見学会についてのご質問・キャンセルのご連絡などは、すべて下記の問い合わせフォームへお願いいたします。主催のPTAが責任をもってお答えします。</p>
       <!-- 【要差し替え】問い合わせ用Googleフォームの公開URL -->
-      <p><a href="#" class="btn-black">問い合わせフォームへ <span class="cv">▶</span></a></p>
+      <!-- 【要差し替え】問い合わせ用Googleフォームの公開URL。決まり次第 <a href="URL" class="btn-black"> に戻す -->
+      <p><span class="btn-black btn-soon" aria-disabled="true">問い合わせフォームは準備中です</span></p>
+      <p class="btn-note-soon">公開までの間にご質問がある場合は、各校のPTA役員へお声がけください。</p>
     </div>
   </div>
 </section>
@@ -716,7 +723,9 @@
     <h2>学校がお休みの日に、<br>朝8時の市場へ。</h2>
     <p>麻生区・多摩区・宮前区にお住まいの小学生・中学生と、その保護者／参加無料／最大15組（応募多数の場合は抽選）<br><strong>申込締切：2026年9月26日（土）</strong>／抽選結果は9月27日（日）にご連絡します</p>
     <!-- 【要差し替え】Googleフォームの公開URL（https://forms.gle/～） -->
-    <p><a href="#" class="btn-black btn-orange">参加申し込みに応募する <span class="cv">▶</span></a></p>
+    <!-- 【要差し替え】応募用Googleフォームの公開URL。決まり次第 <a href="URL" class="btn-black btn-orange"> に戻す -->
+    <p><span class="btn-black btn-orange btn-soon" aria-disabled="true">応募フォームは準備中です</span></p>
+    <p class="btn-note-soon">応募受付の開始は、各校からのご案内でお知らせします。</p>
     <p style="font-size:13px;margin-top:14px;">応募フォームでは、参加人数・学年・お車の利用予定などをあわせてうかがいます。</p>
   </div>
 </section>
