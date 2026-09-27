@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LINEグループ参加ガイド｜北部市場 親子見学会</title>
+<meta name="description" content="北部市場 親子見学会（10/13）参加者向け。LINEグループへの参加のしかたと、自己紹介ノートの書き方をスマホ画面のイメージで説明します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --mint:#E4F2E7; --mint-ink:#3F8C55;
+    --aqua:#E2EFF6; --aqua-ink:#1F6F8B;
+    --cream:#FFF3DF; --cream-ink:#E2670F;
+    --peach:#FDECE2;
+    --ink:#2B2B2B; --ink-soft:#666060; --line:#E7E0D5;
+    --white:#FFFFFF;
+    --line-green:#06C755;
+    --font-display:"Zen Maru Gothic", sans-serif;
+    --font-text:"Zen Kaku Gothic New", sans-serif;
+    --shadow:0 10px 24px -14px rgba(43,43,43,.4);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream); color:var(--ink);
+    font-family:var(--font-text); font-size:16px; line-height:1.8;
+    -webkit-font-smoothing:antialiased; word-break:auto-phrase; line-break:strict;
+  }
+  a{color:var(--aqua-ink);}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px;}
+
+  /* ===== ヘッダー ===== */
+  .hero{padding:36px 0 20px;text-align:center;}
+  .kicker{display:inline-block;background:var(--white);border:2px solid var(--line);border-radius:999px;
+          padding:2px 14px;font-size:13px;font-weight:700;color:var(--ink-soft);}
+  h1{font-family:var(--font-display);font-weight:900;font-size:clamp(24px,6vw,34px);line-height:1.4;margin:12px 0 8px;}
+  h1 .g{color:var(--line-green);}
+  .hero p{margin:0 auto;max-width:560px;color:var(--ink-soft);font-size:15px;}
+  .toc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 0;padding:0;list-style:none;}
+  .toc a{display:block;background:var(--white);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;
+         text-decoration:none;color:var(--ink);box-shadow:var(--shadow);}
+
+  /* ===== セクション ===== */
+  section{padding:26px 0;}
+  .card{background:var(--white);border-radius:22px;box-shadow:var(--shadow);padding:24px 18px;}
+  h2{font-family:var(--font-display);font-weight:900;font-size:clamp(20px,5vw,25px);margin:0 0 4px;line-height:1.45;}
+  h2 .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cream-ink);
+          color:#fff;font-size:18px;margin-right:8px;vertical-align:2px;}
+  .who{margin:0 0 18px;color:var(--ink-soft);font-size:14px;}
+  .who b{color:var(--ink);}
+
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px 18px;}
+  .step{text-align:center;}
+  .step .cap{margin-top:12px;font-weight:700;font-size:15px;line-height:1.6;}
+  .step .cap small{display:block;font-weight:500;color:var(--ink-soft);font-size:13px;}
+  .badge{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--mint-ink);
+         color:#fff;font-size:14px;font-weight:700;margin-right:4px;}
+
+  /* ===== スマホのイメージ ===== */
+  .phone{width:212px;height:392px;margin:0 auto;border:9px solid #2B2B2B;border-radius:34px;background:#fff;
+         overflow:hidden;position:relative;box-shadow:0 14px 28px -16px rgba(0,0,0,.5);text-align:left;font-size:12px;line-height:1.5;}
+  .phone::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:62px;height:16px;
+                 background:#2B2B2B;border-radius:10px;z-index:3;}
+  .sbar{height:28px;background:inherit;}
+  .bar{height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-weight:700;font-size:12px;}
+  .bar.green{background:var(--line-green);color:#fff;}
+  .bar.white{background:#fff;color:var(--ink);border-bottom:1px solid #eee;}
+  .bar.gray{background:#F4F4F4;color:var(--ink);border-bottom:1px solid #e6e6e6;}
+  .scr{padding:10px;}
+  .muted{color:#999;}
+  .ring{position:relative;display:inline-block;border-radius:10px;box-shadow:0 0 0 3px var(--cream-ink);animation:pulse 1.6s ease-in-out infinite;}
+  .tap{position:absolute;font-size:26px;line-height:1;pointer-events:none;animation:tap 1.6s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 3px var(--cream-ink);}50%{box-shadow:0 0 0 6px rgba(226,103,15,.35);}}
+  @keyframes tap{0%,100%{transform:translate(0,0);}50%{transform:translate(-3px,-4px);}}
+  @media (prefers-reduced-motion: reduce){.ring,.tap{animation:none;}}
+
+  /* メール画面 */
+  .mail-h{font-weight:700;font-size:12px;margin-bottom:4px;}
+  .mail-b{background:#FAFAFA;border-radius:8px;padding:8px;color:#444;font-size:11px;}
+  .mail-b .lnk{color:#1a5fd0;text-decoration:underline;word-break:break-all;padding:1px 3px;}
+  /* グループのプロフィール */
+  .gprof{text-align:center;padding:26px 12px;}
+  .gicon{width:74px;height:74px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-size:36px;margin:0 auto 10px;}
+  .gname{font-weight:700;font-size:13px;}
+  .gmem{color:#888;font-size:11px;margin:2px 0 18px;}
+  .btn-line{display:block;background:var(--line-green);color:#fff;font-weight:700;border-radius:8px;padding:9px 0;text-align:center;}
+  .btn-ghost{display:block;color:#888;margin-top:10px;text-align:center;font-size:11px;}
+  /* トーク画面 */
+  .chat{background:#8CABD9;height:324px;padding:10px 8px;}
+  .msg{background:#fff;border-radius:12px;padding:6px 9px;margin:0 30px 8px 0;font-size:11px;}
+  .msg.me{background:#8DE055;margin:0 0 8px 34px;}
+  .sys{text-align:center;color:#eef;font-size:10px;margin:6px 0;}
+  .ann{background:#fff;border-radius:8px;padding:5px 8px;font-size:10.5px;margin-bottom:8px;}
+  /* 友だち追加 */
+  .icons{display:flex;gap:10px;}
+  .ico{font-size:17px;}
+  .addgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 10px;text-align:center;font-size:10.5px;}
+  .addgrid .i{display:block;font-size:22px;margin-bottom:2px;}
+  .scan{background:#111;height:324px;display:grid;place-items:center;}
+  .scan .frame{width:128px;height:128px;border:3px solid #fff;border-radius:10px;display:grid;place-items:center;}
+  .scan .qr{width:92px;height:92px;border-radius:4px;opacity:.9;
+      background:repeating-conic-gradient(#222 0 25%,#fff 0 50%) 0 0/14px 14px;}
+  .scan .t{color:#fff;font-size:11px;margin-top:10px;text-align:center;}
+  /* メニュー */
+  .menu{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 6px;padding:18px 8px;text-align:center;font-size:10.5px;}
+  .menu .i{display:block;font-size:20px;margin-bottom:2px;}
+  /* ノート */
+  .note{border-bottom:1px solid #eee;padding:9px 10px;font-size:11px;}
+  .note .t{font-weight:700;font-size:12px;}
+  .comment-box{position:absolute;left:0;right:0;bottom:0;border-top:1px solid #e6e6e6;background:#fff;padding:8px;
+               display:flex;gap:6px;align-items:center;}
+  .comment-box .in{flex:1;border:1px solid #ddd;border-radius:16px;padding:5px 9px;font-size:10.5px;background:#fafafa;}
+  .comment-box .send{color:var(--line-green);font-weight:700;font-size:11px;}
+  .cmt{font-size:10.5px;padding:6px 10px;border-top:1px solid #f0f0f0;}
+  .cmt b{font-size:10.5px;}
+
+  /* ===== 例文・注意 ===== */
+  .example{margin:22px auto 0;max-width:620px;background:var(--mint);border-radius:16px;padding:16px 18px;}
+  .example .h{font-family:var(--font-display);font-weight:900;color:var(--mint-ink);margin-bottom:4px;}
+  .example .ex{background:#fff;border-radius:10px;padding:10px 12px;font-weight:700;margin-top:8px;}
+  .note-img{font-size:13px;color:var(--ink-soft);text-align:center;margin:18px 0 0;}
+  .faq details{background:var(--white);border-radius:14px;box-shadow:var(--shadow);padding:12px 16px;margin-bottom:10px;}
+  .faq summary{font-weight:700;cursor:pointer;}
+  .faq p{margin:8px 0 2px;font-size:15px;}
+  .privacy{background:var(--peach);border-radius:16px;padding:14px 18px;font-size:14px;margin-top:18px;}
+  footer{padding:26px 0 40px;text-align:center;font-size:13px;color:var(--ink-soft);}
+  .back{display:inline-block;margin-top:8px;font-weight:700;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">北部市場 親子見学会（10/13）参加者の方へ</span>
+    <h1><span class="g">LINEグループ</span>への<br>参加のしかた</h1>
+    <p>かかる時間は1分ほどです。参加したら、グループの「ノート」にかんたんな自己紹介を書いてください。</p>
+    <ul class="toc">
+      <li><a href="#sp">① スマホでメールを見ている方</a></li>
+      <li><a href="#pc">② パソコンでメールを見ている方</a></li>
+      <li><a href="#intro">③ 自己紹介を書く</a></li>
+      <li><a href="#faq">困ったとき</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== ① スマホ ===== -->
+  <section id="sp">
+    <div class="card">
+      <h2><span class="num">1</span>スマホでメールを見ている方</h2>
+      <p class="who">事務局からの<b>「参加確定」のメール</b>にあるリンクから参加します。</p>
+      <div class="steps">
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>‹ 受信</span><span class="muted">メール</span></div>
+            <div class="scr">
+              <div class="mail-h">【参加確定】北部市場 親子見学会…</div>
+              <div class="mail-b">
+                ■ 参加者のLINEグループに<br>ご参加ください<br><br>
+                ▼ スマホの方は、ここをタップ<br>
+                <span class="ring"><span class="lnk">line.me/ti/g/…</span></span><span class="tap" style="margin:6px 0 0 -26px">👆</span><br><br>
+                <span class="muted">▼ パソコンの方は…</span>
+              </div>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">1</span>メールのリンクをタップ</div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>✕</span><span></span></div>
+            <div class="gprof">
+              <div class="gicon">🐟</div>
+              <div class="gname">北部市場 親子見学会<br>10/13 参加者</div>
+              <div class="gmem">メンバー ◯人</div>
+              <span class="ring" style="display:block"><span class="btn-line">参加</span></span>
+              <span class="tap" style="margin:-14px 0 0 60px">👆</span>
+              <span class="btn-ghost">キャンセル</span>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">2</span>LINEが開いたら「参加」をタップ<small>グループの紹介画面が開きます</small></div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:var(--line-green)"></div>
+            <div class="bar green"><span>‹</span><span>北部市場 親子見学会…</span><span>≡</span></div>
+            <div class="chat">
+              <div class="sys">あなたがグループに参加しました</div>
+              <div class="msg">ようこそ！運営委員の荏原です。自己紹介は「ノート」へお願いします😊</div>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">3</span>トーク画面が開けば参加完了<small>つづけて ③ 自己紹介へ</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ② パソコン ===== -->
+  <section id="pc">
+    <div class="card">
+      <h2><span class="num">2</span>パソコンでメールを見ている方</h2>
+      <p class="who">メールに<b>添付されたQRコード</b>をパソコンの画面に出しておき、スマホのLINEで読み取ります。</p>
+      <div class="steps">
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>ホーム</span><span class="icons"><span class="ico">🔔</span><span class="ring"><span class="ico">👤＋</span></span></span></div>
+            <span class="tap" style="right:6px;top:74px">👆</span>
+            <div class="scr">
+              <div style="background:#f2f2f2;border-radius:14px;padding:5px 10px;color:#999">🔍 検索</div>
+              <p class="muted" style="margin-top:14px">友だちリスト<br>グループ<br>サービス…</p>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">1</span>LINEの「ホーム」右上の<br>「友だち追加」をタップ</div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>‹</span><span>友だち追加</span><span></span></div>
+            <div class="addgrid">
+              <div><span class="i">✉️</span>招待</div>
+              <div><span class="ring" style="padding:4px 6px"><span class="i">▦</span>QRコード</span></div>
+              <div><span class="i">🔍</span>検索</div>
+            </div>
+            <span class="tap" style="left:108px;top:150px">👆</span>
+          </div>
+          <div class="cap"><span class="badge">2</span>「QRコード」をタップ</div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#111"></div>
+            <div class="scan">
+              <div>
+                <div class="frame"><div class="qr"></div></div>
+                <div class="t">パソコン画面のQRを<br>枠に合わせる</div>
+              </div>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">3</span>パソコンに出したQRを読み取る<small>このあと「参加」をタップ（① の2と同じ）</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ③ 自己紹介 ===== -->
+  <section id="intro">
+    <div class="card">
+      <h2><span class="num">3</span>自己紹介を書く（ノートにコメント）</h2>
+      <p class="who">当日、ほかの区・学校の方と話すきっかけになります。<b>区・学校名・お名前</b>だけで大丈夫です。</p>
+      <div class="steps">
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:var(--line-green)"></div>
+            <div class="bar green"><span>‹</span><span>北部市場 親子見学会…</span><span class="ring" style="padding:0 5px;box-shadow:0 0 0 3px #fff">≡</span></div>
+            <span class="tap" style="right:2px;top:70px">👆</span>
+            <div class="chat">
+              <div class="ann">📢 自己紹介は「ノート」へお願いします</div>
+              <div class="msg">当日よろしくお願いします！</div>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">1</span>トーク画面の右上「≡」をタップ</div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>‹</span><span>メニュー</span><span></span></div>
+            <div class="menu">
+              <div><span class="i">🖼️</span>写真・動画</div>
+              <div><span class="i">📁</span>アルバム</div>
+              <div><span class="ring" style="padding:3px 6px"><span class="i">📝</span>ノート</span></div>
+              <div><span class="i">🔗</span>リンク</div>
+              <div><span class="i">🔕</span>通知オフ</div>
+              <div><span class="i">🚪</span>退会</div>
+            </div>
+            <span class="tap" style="right:14px;top:132px">👆</span>
+          </div>
+          <div class="cap"><span class="badge">2</span>「ノート」をタップ</div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>‹</span><span>ノート</span><span>＋</span></div>
+            <div class="note ring" style="margin:8px;display:block;border-radius:10px">
+              <div class="t">📝 自己紹介はこちら</div>
+              <div class="muted">区・学校名・お名前をコメントで…</div>
+            </div>
+            <span class="tap" style="right:18px;top:118px">👆</span>
+            <div class="note"><div class="t muted">当日の持ち物</div></div>
+          </div>
+          <div class="cap"><span class="badge">3</span>「自己紹介はこちら」を開く</div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>‹</span><span>ノート</span><span></span></div>
+            <div class="note"><div class="t">📝 自己紹介はこちら</div><div class="muted">コメントで教えてください</div></div>
+            <div class="cmt"><b>荏原</b>　多摩区／東菅小学校／荏原です。</div>
+            <div class="comment-box">
+              <span class="ring in">麻生区／◯◯小学校／山田です。</span>
+              <span class="send">送信</span>
+            </div>
+          </div>
+          <div class="cap"><span class="badge">4</span>下の欄に書いて「送信」</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="h">✍️ 書くこと（これだけでOK）</div>
+        区 ／ 学校名 ／ お名前（＋ひとこと、あれば）
+        <div class="ex">麻生区／◯◯小学校／山田です。親子で参加します！よろしくお願いします。</div>
+        <div style="font-size:13px;margin-top:8px;color:var(--ink-soft)">※ お子さんのお名前・学年は書かなくて大丈夫です</div>
+      </div>
+      <p class="note-img">※ 画面はイメージです。スマホの機種やLINEのバージョンによって、ボタンの位置や名前が少し違うことがあります。</p>
+    </div>
+  </section>
+
+  <!-- ===== 困ったとき ===== -->
+  <section id="faq" class="faq">
+    <h2 style="margin-bottom:12px">困ったとき</h2>
+    <details>
+      <summary>リンクをタップしてもLINEが開かない</summary>
+      <p>スマホにLINEアプリが入っているか確認し、アプリを最新版に更新してから、もう一度タップしてください。それでも開かないときは、② のQRコードの方法をお試しください。</p>
+    </details>
+    <details>
+      <summary>ほかの参加者に何が見えますか？</summary>
+      <p>LINEの表示名とアイコン（プロフィール画像）が見えます。表示名が本名でなくても、自己紹介でお名前を書いていただければ大丈夫です。</p>
+    </details>
+    <details>
+      <summary>通知が多くて困るとき</summary>
+      <p>トーク画面の右上「≡」→「通知オフ」で、このグループだけ通知を止められます。大切なお知らせはメールでもお送りします。</p>
+    </details>
+    <details>
+      <summary>グループはいつまでありますか？</summary>
+      <p>見学会が終わってしばらくしたら解散します（11月中旬の予定）。先に抜けたいときは、「≡」→「退会」でいつでも抜けられます。</p>
+    </details>
+    <details>
+      <summary>キャンセル・人数の変更をしたい</summary>
+      <p>グループではなく、受付番号を添えてメールでお知らせください（<a href="mailto:info.pta.event@gmail.com">info.pta.event@gmail.com</a>）。受付の記録をメールにまとめているためです。</p>
+    </details>
+    <div class="privacy">
+      🔒 グループへの参加リンクとQRコードは、参加される方だけにお送りしている<b>「参加確定」のメール</b>に載せています。このページには載せていません。<br>
+      お子さんの顔が写った写真と、駐車場の地図は、グループに投稿しないようお願いします。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    主催：北部3区PTA協議会（麻生区・多摩区・宮前区）ホリスタ企画 事務局<br>
+    <a class="back" href="../">‹ 見学会の案内ページへ</a>
+  </div>
+</footer>
+
+</body>
+</html>
