@@ -320,7 +320,7 @@
 </head>
 <body>
 
-<div class="topbar">📣 ただいま応募受付中｜応募締切 <b>2026年9月26日（土）</b>｜最大15組・参加無料</div>
+<div class="topbar">🔒 参加申し込みの受付は終了しました｜たくさんのご応募ありがとうございました｜開催 <b>10月13日（火）</b></div>
 
 <header class="nav">
   <div class="nav-inner">
@@ -332,7 +332,7 @@
     </div>
     <div class="nav-actions">
       <a href="#contact" class="nav-cta2">問い合わせ</a>
-      <a href="#apply" class="nav-cta">応募する</a>
+      <a href="#apply" class="nav-cta">受付終了</a>
     </div>
   </div>
 </header>
@@ -356,9 +356,9 @@
         <span class="w">（火）</span>
       </div>
       <div class="time-note"><span class="nb">8:00 開始</span> <span class="tn-sub">（10:10 終了）</span></div>
-      <p class="hero-note">対象：麻生区・多摩区・宮前区のPTA役員（単位PTAの役員を含む）と、そのお子さん／最大15組（応募多数の場合は抽選・結果は9月27日にご連絡）</p>
+      <p class="hero-note">対象：麻生区・多摩区・宮前区のPTA役員（単位PTAの役員を含む）と、そのお子さん／最大15組（参加申し込みの受付は終了しました）</p>
 
-      <p style="margin-top:22px;"><a href="#apply" class="btn-black btn-orange">参加申し込みに応募する <span class="cv">▶</span></a></p>
+      <p style="margin-top:22px;"><a href="#apply" class="btn-black">参加申し込みの受付は終了しました</a></p>
     </div>
   </div>
 </section>
@@ -749,19 +749,18 @@
 <section class="section final" id="apply">
   <div class="wrap">
     <h2>学校がお休みの日に、<br>朝8時の市場へ。</h2>
-    <p>麻生区・多摩区・宮前区のPTA役員（単位PTAの役員を含む）と、そのお子さん／参加無料／最大15組（応募多数の場合は抽選）<br><strong>申込締切：2026年9月26日（土）</strong>／抽選結果は9月27日（日）にご連絡します</p>
+    <p><strong>参加申し込みの受付は終了しました</strong>（締切：2026年9月26日（土））<br>たくさんのご応募、ありがとうございました。ご応募いただいた方には、参加のご案内をメールでお送りします。</p>
     <div class="formbox">
       <!-- GASウェブアプリのURLは、下部の <script> 内 GAS_FORM_URL に設定します -->
       <iframe id="applyFrame" title="北部市場 親子見学会 参加申込フォーム"
               width="100%" frameborder="0" scrolling="no" loading="lazy"
               style="display:none;"></iframe>
       <div class="form-soon" id="formSoon">
-        <div class="t">応募フォームは準備中です</div>
-        <div class="d">応募受付の開始は、各校からのご案内でお知らせします。</div>
+        <div class="t">参加申し込みの受付は終了しました</div>
+        <div class="d">キャンセル・人数の変更は、受付番号を添えて下のお問い合わせ先へご連絡ください。</div>
       </div>
       <p class="form-note">
-        ご応募には、保護者のお名前・ふりがな・メールアドレス・当日つながる電話番号、お住まいの区とお子さんが通う学校名、参加人数、当日の交通手段のご入力が必要です。<br>
-        抽選結果は9月27日（日）に、ご登録のメールアドレスへご連絡します。
+        ご応募いただいた方へ：当日のご案内（集合場所・駐車場・持ち物など）は、ご登録のメールアドレスへお送りします。
       </p>
     </div>
   </div>
@@ -820,7 +819,9 @@
     var soon  = document.getElementById('formSoon');
     if (!frame || !soon) return;
 
-    if (GAS_FORM_URL) {
+    // 受付終了（2026-09-27）。true の間はフォームを読み込まず「受付は終了しました」を表示する
+    var APPLY_CLOSED = true;
+    if (GAS_FORM_URL && !APPLY_CLOSED) {
       frame.src = GAS_FORM_URL;
       frame.style.display = 'block';
       soon.style.display = 'none';
