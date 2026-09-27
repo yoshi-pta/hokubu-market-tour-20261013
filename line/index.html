@@ -115,6 +115,16 @@
   .comment-box .in{flex:1;border:1px solid #ddd;border-radius:16px;padding:5px 9px;font-size:10.5px;background:#fafafa;}
   .comment-box .send{color:var(--line-green);font-weight:700;font-size:11px;}
   .cmt{font-size:10.5px;padding:6px 10px;border-top:1px solid #f0f0f0;}
+  /* ノート詳細の下のアイコン3つ（リアクション／コメント／共有） */
+  .nicons{display:flex;gap:18px;align-items:center;padding:6px 12px 2px;}
+  .nicons svg{width:24px;height:24px;fill:none;stroke:#333;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block;}
+  .nicons svg .f{fill:#333;stroke:none;}
+  .nring{padding:3px;border-radius:50%;}
+  .ndate{color:#999;font-size:10px;padding:4px 12px;}
+  .fab{position:absolute;right:12px;bottom:14px;width:40px;height:40px;border-radius:50%;background:#5AC463;color:#fff;
+       display:grid;place-items:center;font-size:22px;line-height:1;}
+  .fab .x{position:absolute;right:-4px;top:-6px;width:18px;height:18px;border-radius:50%;background:#C0392B;color:#fff;
+          font-size:10px;display:grid;place-items:center;}
   .cmt b{font-size:10.5px;}
 
   /* ===== 例文・注意 ===== */
@@ -191,7 +201,7 @@
             <div class="bar green"><span>‹</span><span>北部市場 親子見学会…</span><span>≡</span></div>
             <div class="chat">
               <div class="sys">あなたがグループに参加しました</div>
-              <div class="msg">ようこそ！運営委員の荏原です。自己紹介は「ノート」へお願いします😊</div>
+              <div class="msg">ようこそ！運営委員です。自己紹介は「ノート」へお願いします😊</div>
             </div>
           </div>
           <div class="cap"><span class="badge">3</span>トーク画面が開けば参加完了<small>つづけて ③ 自己紹介へ</small></div>
@@ -298,14 +308,34 @@
           <div class="phone">
             <div class="sbar" style="background:#fff"></div>
             <div class="bar white"><span>‹</span><span>ノート</span><span></span></div>
-            <div class="note"><div class="t">📝 自己紹介はこちら</div><div class="muted">コメントで教えてください</div></div>
-            <div class="cmt"><b>荏原</b>　多摩区／東菅小学校／荏原です。</div>
+            <div class="note" style="border:0">
+              <div class="t">📝 自己紹介はこちら</div>
+              <div style="font-size:10.5px;color:#555">北部市場 親子見学会（10/13）に参加される皆さん、ようこそ！<br>このノートにコメントで…</div>
+            </div>
+            <div class="nicons">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><circle cx="9" cy="10" r=".9" class="f"/><circle cx="15" cy="10" r=".9" class="f"/><path d="M8.3 14.2c1 1.4 2.2 2 3.7 2s2.7-.6 3.7-2"/></svg>
+              <span class="ring nring"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c-5 0-8.8 3.4-8.8 7.8 0 2.5 1.2 4.6 3.2 6l-.6 3.2 3.3-1.8c.9.2 1.9.4 2.9.4 5 0 8.8-3.4 8.8-7.8S17 3.5 12 3.5z"/><circle cx="8.3" cy="11.3" r=".9" class="f"/><circle cx="12" cy="11.3" r=".9" class="f"/><circle cx="15.7" cy="11.3" r=".9" class="f"/></svg></span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 11v9h14v-9"/></svg>
+            </div>
+            <span class="tap" style="left:72px;top:190px">👆</span>
+            <div class="ndate">2026/09/28 21:00</div>
+            <div class="fab" aria-hidden="true">＋<span class="x">✕</span></div>
+          </div>
+          <div class="cap"><span class="badge">4</span>ノートの下のアイコン3つのうち<br>まん中の「吹き出し」をタップ<small>右下の緑の「＋」は新しいノートを作るボタンです。押さないでください</small></div>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sbar" style="background:#fff"></div>
+            <div class="bar white"><span>‹</span><span>コメント</span><span></span></div>
+            <div class="cmt"><b>佐藤</b>　多摩区／◯◯小学校／佐藤です。よろしくお願いします！</div>
+            <div class="cmt"><b>鈴木</b>　宮前区／◯◯中学校／鈴木です。</div>
             <div class="comment-box">
               <span class="ring in">麻生区／◯◯小学校／山田です。</span>
               <span class="send">送信</span>
             </div>
+            <span class="tap" style="right:34px;bottom:-4px">👆</span>
           </div>
-          <div class="cap"><span class="badge">4</span>下の欄に書いて「送信」</div>
+          <div class="cap"><span class="badge">5</span>下の欄に自己紹介を書いて「送信」<small>ほかの方の自己紹介もここで読めます</small></div>
         </div>
       </div>
 
